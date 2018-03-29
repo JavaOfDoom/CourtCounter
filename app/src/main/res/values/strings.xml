@@ -1,3 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="app_name">Court Counter</string>
+    <string-array name="baseball_team_names">
+        <item>Arizona Diamondbacks</item>
+        <item>Atlanta Braves</item>
+        <item>Baltimore Orioles</item>
+        <item>Boston Red Sox</item>
+        <item>Chicago Cubs</item>
+        <item>Chicago White Sox</item>
+        <item>Cincinnati Reds</item>
+        <item>Cleveland Indians</item>
+        <item>Colorado Rockies</item>
+        <item>Detroit Tigers</item>
+        <item>Houston Astros</item>
+        <item>Kansas City Royals</item>
+        <item>Los Angeles Angels</item>
+        <item>Los Angeles Dodgers</item>
+        <item>Miami Marlins</item>
+        <item>Milwaukee Brewers</item>
+        <item>Minnesota Twins</item>
+        <item>New York Mets</item>
+        <item>New York Yankees</item>
+        <item>Oakland Athletics</item>
+        <item>Philadelphia Phillies</item>
+        <item>Pittsburgh Pirates</item>
+        <item>San Diego Padres</item>
+        <item>San Francisco Giants</item>
+        <item>Seattle Mariners</item>
+        <item>St. Louis Cardinals</item>
+        <item>Tampa Bay Rays</item>
+        <item>Texas Rangers</item>
+        <item>Toronto Blue Jays</item>
+        <item>Washington Nationals</item>
+    </string-array>
 </resources>

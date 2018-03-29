@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="app_name">Court Counter</string>
+    <string name="inning">Current Inning</string>
     <string-array name="baseball_team_names">
         <item>Arizona Diamondbacks</item>
         <item>Atlanta Braves</item>
@@ -33,9 +34,11 @@
         <item>Toronto Blue Jays</item>
         <item>Washington Nationals</item>
     </string-array>
+    <string name="starting_value">0</string>
     <string name="run">Run</string>
     <string name="home_run">Home Run</string>
     <string name="out">Out</string>
     <string name="strike">Strike</string>
     <string name="ball_foul">Ball/Foul</string>
+    <string name="reset">reset</string>
 </resources>

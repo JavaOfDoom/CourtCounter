@@ -33,4 +33,9 @@
         <item>Toronto Blue Jays</item>
         <item>Washington Nationals</item>
     </string-array>
+    <string name="run">Run</string>
+    <string name="home_run">Home Run</string>
+    <string name="out">Out</string>
+    <string name="strike">Strike</string>
+    <string name="ball_foul">Ball/Foul</string>
 </resources>

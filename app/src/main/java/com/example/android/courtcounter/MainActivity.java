@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 0) {
             scoreAwayTeam += 1;
             displayRunAwayTeam(scoreAwayTeam);
+        } else if (teamAtBat == 2) {
+            Toast awayRunGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            awayRunGameOver.setGravity(Gravity.TOP, 0, 150);
+            awayRunGameOver.show();
         } else {
             Toast runHomeAtBat = Toast.makeText(this, "The home team is at bat!", Toast.LENGTH_SHORT);
             runHomeAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -53,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 0) {
             outAwayTeam += 1;
             displayOutAwayTeam(outAwayTeam);
+        } else if (teamAtBat == 2) {
+            Toast awayOutGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            awayOutGameOver.setGravity(Gravity.TOP, 0, 150);
+            awayOutGameOver.show();
         } else {
             Toast outHomeAtBat = Toast.makeText(this, "The home team is at bat!", Toast.LENGTH_SHORT);
             outHomeAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -76,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 0) {
             strikeAwayTeam += 1;
             displayStrikeAwayTeam(strikeAwayTeam);
+        } else if (teamAtBat == 2) {
+            Toast awayStrikeGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            awayStrikeGameOver.setGravity(Gravity.TOP, 0, 150);
+            awayStrikeGameOver.show();
         } else {
             Toast strikeHomeAtBat = Toast.makeText(this, "The home team is at bat!", Toast.LENGTH_SHORT);
             strikeHomeAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -112,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
                 foulAwayTeam = foulAwayTeam + 1;
                 displayFoulAwayTeam(foulAwayTeam);
             }
+        } else if (teamAtBat == 2) {
+            Toast awayFoulGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            awayFoulGameOver.setGravity(Gravity.TOP, 0, 150);
+            awayFoulGameOver.show();
         } else {
             Toast foulHomeAtBat = Toast.makeText(this, "The home team is at bat!", Toast.LENGTH_SHORT);
             foulHomeAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -123,6 +139,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 1) {
             scoreHomeTeam += 1;
             displayRunHomeTeam(scoreHomeTeam);
+        } else if (teamAtBat == 2) {
+            Toast homeRunGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            homeRunGameOver.setGravity(Gravity.TOP, 0, 150);
+            homeRunGameOver.show();
         } else {
             Toast runAwayAtBat = Toast.makeText(this, "The away team is at bat!", Toast.LENGTH_SHORT);
             runAwayAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -134,6 +154,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 1) {
             outHomeTeam += 1;
             displayOutHomeTeam(outHomeTeam);
+        } else if (teamAtBat == 2) {
+            Toast homeOutGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            homeOutGameOver.setGravity(Gravity.TOP, 0, 150);
+            homeOutGameOver.show();
         } else {
             Toast outAwayAtBat = Toast.makeText(this, "The away team is at bat!", Toast.LENGTH_SHORT);
             outAwayAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -187,6 +211,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 1) {
             strikeHomeTeam += 1;
             displayStrikeHomeTeam(strikeHomeTeam);
+        } else if (teamAtBat == 2) {
+            Toast homeStrikeGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            homeStrikeGameOver.setGravity(Gravity.TOP, 0, 150);
+            homeStrikeGameOver.show();
         } else {
             Toast strikeAwayAtBat = Toast.makeText(this, "The away team is at bat!", Toast.LENGTH_SHORT);
             strikeAwayAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -256,6 +284,10 @@ public class MainActivity extends AppCompatActivity {
                 foulHomeTeam = foulHomeTeam + 1;
                 displayFoulHomeTeam(foulHomeTeam);
             }
+        } else if (teamAtBat == 2) {
+            Toast homeFoulGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            homeFoulGameOver.setGravity(Gravity.TOP, 0, 150);
+            homeFoulGameOver.show();
         } else {
             Toast foulAwayAtBat = Toast.makeText(this, "The away team is at bat!", Toast.LENGTH_SHORT);
             foulAwayAtBat.setGravity(Gravity.TOP, 0, 150);
@@ -267,6 +299,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 0) {
             strikeAwayTeam = 0;
             displayStrikeAwayTeam(strikeAwayTeam);
+        } else if (teamAtBat == 2) {
+            Toast resetStrikeGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            resetStrikeGameOver.setGravity(Gravity.TOP, 0, 150);
+            resetStrikeGameOver.show();
         } else {
             strikeHomeTeam = 0;
             displayStrikeHomeTeam(strikeHomeTeam);
@@ -299,6 +335,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamAtBat == 0) {
             foulAwayTeam = 0;
             displayFoulAwayTeam(foulAwayTeam);
+        } else if (teamAtBat == 2) {
+            Toast resetFoulGameOver = Toast.makeText(this, "Game over!", Toast.LENGTH_SHORT);
+            resetFoulGameOver.setGravity(Gravity.TOP, 0, 150);
+            resetFoulGameOver.show();
         } else {
             foulHomeTeam = 0;
             displayFoulHomeTeam(foulHomeTeam);

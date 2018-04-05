@@ -37,7 +37,7 @@
                 style="@style/inningTracking"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.1"
+                android:layout_weight="1.48"
                 android:paddingLeft="4dp"
                 android:text="@string/first_inning" />
 
@@ -62,7 +62,8 @@
                     android:entries="@array/away_team_name_choices"
                     android:gravity="center_horizontal"
                     android:padding="16dp"
-                    android:spinnerMode="dialog" />
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,6 +86,21 @@
                         android:gravity="center_horizontal"
                         android:text="@string/out" />
 
+                    <TextView
+                        style="@style/metricLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/strike" />
+
+                    <TextView
+                        style="@style/metricLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/foul" />
 
                 </LinearLayout>
 
@@ -110,34 +126,6 @@
                         android:gravity="center_horizontal"
                         android:text="@string/starting_value" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        style="@style/metricLabels"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:text="@string/strike" />
-
-                    <TextView
-                        style="@style/metricLabels"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:text="@string/foul" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
                     <TextView
                         android:id="@+id/away_team_strikes"
                         style="@style/trackedMetrics"
@@ -158,41 +146,57 @@
 
                 </LinearLayout>
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addRunAwayTeam"
-                    android:text="@string/run" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addOutAwayTeam"
-                    android:text="@string/out" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addRunAwayTeam"
+                        android:text="@string/run" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addStrikeAwayTeam"
-                    android:text="@string/strike" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addOutAwayTeam"
+                        android:text="@string/out" />
 
-                <Button
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addFoulAwayTeam"
-                    android:text="@string/foul" />
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addStrikeAwayTeam"
+                        android:text="@string/strike" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addFoulAwayTeam"
+                        android:text="@string/foul" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -200,6 +204,7 @@
 
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="12dp"
                 android:layout_marginTop="12dp"
                 android:background="@android:color/darker_gray" />
 
@@ -216,7 +221,8 @@
                     android:entries="@array/home_team_name_choices"
                     android:gravity="center_horizontal"
                     android:padding="16dp"
-                    android:spinnerMode="dialog" />
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -238,6 +244,21 @@
                         android:gravity="center_horizontal"
                         android:text="@string/out" />
 
+                    <TextView
+                        style="@style/metricLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/strike" />
+
+                    <TextView
+                        style="@style/metricLabels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/foul" />
 
                 </LinearLayout>
 
@@ -263,34 +284,6 @@
                         android:gravity="center_horizontal"
                         android:text="@string/starting_value" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        style="@style/metricLabels"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:text="@string/strike" />
-
-                    <TextView
-                        style="@style/metricLabels"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:text="@string/foul" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
                     <TextView
                         android:id="@+id/home_team_strikes"
                         style="@style/trackedMetrics"
@@ -311,41 +304,57 @@
 
                 </LinearLayout>
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addRunHomeTeam"
-                    android:text="@string/run" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addOutHomeTeam"
-                    android:text="@string/out" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addRunHomeTeam"
+                        android:text="@string/run" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addStrikeHomeTeam"
-                    android:text="@string/strike" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addOutHomeTeam"
+                        android:text="@string/out" />
 
-                <Button
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:onClick="addFoulHomeTeam"
-                    android:text="@string/foul" />
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addStrikeHomeTeam"
+                        android:text="@string/strike" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:onClick="addFoulHomeTeam"
+                        android:text="@string/foul" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -357,7 +366,7 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/full_reset"
@@ -371,7 +380,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="6dp"
         android:onClick="resetAll"
         android:text="@string/reset_all" />
 
@@ -379,7 +388,7 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/full_reset"

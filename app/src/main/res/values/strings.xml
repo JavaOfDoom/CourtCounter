@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Court Counter</string>
     <string name="inning">Current Inning</string>
+    <string name="first_inning">1</string>
     <string-array name="baseball_team_names">
         <item>Arizona Diamondbacks</item>
         <item>Atlanta Braves</item>
@@ -39,6 +40,8 @@
     <string name="home_run">Home Run</string>
     <string name="out">Out</string>
     <string name="strike">Strike</string>
-    <string name="ball_foul">Ball/Foul</string>
-    <string name="reset">reset</string>
+    <string name="foul">Foul</string>
+    <string name="reset_strike">reset strike</string>
+    <string name="reset_all">reset all</string>
+    <string name="reset_foul">reset foul</string>
 </resources>

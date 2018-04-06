@@ -3,7 +3,17 @@
     <string name="app_name">Court Counter</string>
     <string name="inning">Current Inning</string>
     <string name="first_inning">1</string>
-    <string-array name="away_team_name_choices">
+    <string name="starting_value">0</string>
+    <string name="run">Run</string>
+    <string name="home_run">Home Run</string>
+    <string name="out">Out</string>
+    <string name="strike">Strike</string>
+    <string name="foul">Foul</string>
+    <string name="reset_strike">reset strike</string>
+    <string name="reset_all">reset all</string>
+    <string name="reset_foul">reset foul</string>
+
+<!--    <string-array name="away_team_name_choices">
         <item>Choose Away Team</item>
         <item>Arizona Diamondbacks</item>
         <item>Atlanta Braves</item>
@@ -68,14 +78,6 @@
         <item>Texas Rangers</item>
         <item>Toronto Blue Jays</item>
         <item>Washington Nationals</item>
-    </string-array>
-    <string name="starting_value">0</string>
-    <string name="run">Run</string>
-    <string name="home_run">Home Run</string>
-    <string name="out">Out</string>
-    <string name="strike">Strike</string>
-    <string name="foul">Foul</string>
-    <string name="reset_strike">reset strike</string>
-    <string name="reset_all">reset all</string>
-    <string name="reset_foul">reset foul</string>
+    </string-array>-->
+
 </resources>

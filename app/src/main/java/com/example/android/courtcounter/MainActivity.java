@@ -4,10 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Spinner;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+//import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+//import java.util.Arrays;
+//import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,22 +25,90 @@ public class MainActivity extends AppCompatActivity {
     int foulHomeTeam = 0;
     int currentInning = 1;
     int teamAtBat = 0;
+    String[] spinnerAwayTeamNames;
+    String[] spinnerHomeTeamNames;
+    //    String[] awayTeamNames = getResources().getStringArray(R.array.away_team_name_choices);
+//    String[] homeTeamNames = getResources().getStringArray(R.array.home_team_name_choices);
+//    List<String> awayTeamNameList = Arrays.asList(awayTeamNames);
+//    List<String> homeTeamNameList = Arrays.asList(homeTeamNames);
+    int[] spinnerLogos;
+    Spinner awaySpinner;
+    Spinner homeSpinner;
+    private boolean isUserInteracting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        awaySpinner = findViewById(R.id.away_team_name);
+        homeSpinner = findViewById(R.id.home_team_name);
+        spinnerAwayTeamNames = new String[]{"Choose Away Team", "Arizona Diamondbacks", "Atlanta Braves"
+                , "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians"
+                , "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels"
+                , "Log Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Mets"
+                , "New York Yankees", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates"
+                , "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals"
+                , "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"};
+        spinnerHomeTeamNames = new String[]{"Choose Home Team", "Arizona Diamondbacks", "Atlanta Braves"
+                , "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians"
+                , "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels"
+                , "Log Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Mets"
+                , "New York Yankees", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates"
+                , "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals"
+                , "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"};
+        spinnerLogos = new int[]{R.drawable.mlb_logo, R.drawable.logo_ari_79x76, R.drawable.logo_atl_79x76
+                , R.drawable.logo_bal_79x76, R.drawable.logo_bos_79x76, R.drawable.logo_chc_79x76
+                , R.drawable.logo_cws_79x76, R.drawable.logo_cin_79x76, R.drawable.logo_cle_79x76
+                , R.drawable.logo_col_79x76, R.drawable.logo_det_79x76, R.drawable.logo_hou_79x76
+                , R.drawable.logo_kc_79x76, R.drawable.logo_ana_79x76, R.drawable.logo_la_79x76
+                , R.drawable.logo_mia_79x76, R.drawable.logo_mil_79x76, R.drawable.logo_min_79x76
+                , R.drawable.logo_nym_79x76, R.drawable.logo_nyy_79x76, R.drawable.logo_oak_79x76
+                , R.drawable.logo_phi_79x76, R.drawable.logo_pit_79x76, R.drawable.logo_sd_79x76
+                , R.drawable.logo_sf_79x76, R.drawable.logo_sea_79x76, R.drawable.logo_stl_79x76
+                , R.drawable.logo_tb_79x76, R.drawable.logo_tex_79x76, R.drawable.logo_tor_79x76
+                , R.drawable.logo_was_79x76};
+
+        CustomAdapter awayCustomAdapter = new CustomAdapter(MainActivity.this, spinnerAwayTeamNames, spinnerLogos);
+        awaySpinner.setAdapter(awayCustomAdapter);
+
+        CustomAdapter homeCustomAdapter = new CustomAdapter(MainActivity.this, spinnerHomeTeamNames, spinnerLogos);
+        homeSpinner.setAdapter(homeCustomAdapter);
+
+        awaySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (isUserInteracting) {
+                    Toast.makeText(MainActivity.this, spinnerAwayTeamNames[i], Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        homeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (isUserInteracting) {
+                    Toast.makeText(MainActivity.this, spinnerHomeTeamNames[i], Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
-/*    Spinner spinner = (Spinner) findViewById(R.id.spinner);
-    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-            R.array.baseball_team_names, android.R.layout.simple_spinner_item);
-    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-    spinner.setAdapter(adapter);
-
-    public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
-
-    }*/
+    @Override
+    public void onUserInteraction() {
+        super.onUserInteraction();
+        isUserInteracting = true;
+    }
 
     public void addRunAwayTeam(View view) {
         if (teamAtBat == 0) {
@@ -163,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
             outAwayAtBat.setGravity(Gravity.TOP, 0, 150);
             outAwayAtBat.show();
         }
-        if (outHomeTeam == 3) {
+        if (outHomeTeam == 3 & teamAtBat == 1) {
             teamAtBat = 0;
             if (currentInning < 9) {
                 currentInning += 1;

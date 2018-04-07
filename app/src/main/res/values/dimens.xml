@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_layout_width">0dp</dimen>
+    <dimen name="text_padding">4dp</dimen>
+    <dimen name="spinner_height">74dp</dimen>
+    <dimen name="spinner_padding">16dp</dimen>
+    <dimen name="metric_button_margins">24dp</dimen>
+    <dimen name="metric_button_bottom">8dp</dimen>
+    <dimen name="reset_buttons_bottom">32dp</dimen>
+    <dimen name="reset_buttons_side_margin">10dp</dimen>
+    <dimen name="reset_buttons_width">130dp</dimen>
+    <dimen name="land_reset_bottom">6dp</dimen>
+    <dimen name="land_reset_margin">10dp</dimen>
+
+
+</resources>

@@ -6,12 +6,9 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.AdapterView;
-//import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import java.util.Arrays;
-//import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,10 +24,6 @@ public class MainActivity extends AppCompatActivity {
     int teamAtBat = 0;
     String[] spinnerAwayTeamNames;
     String[] spinnerHomeTeamNames;
-    //    String[] awayTeamNames = getResources().getStringArray(R.array.away_team_name_choices);
-//    String[] homeTeamNames = getResources().getStringArray(R.array.home_team_name_choices);
-//    List<String> awayTeamNameList = Arrays.asList(awayTeamNames);
-//    List<String> homeTeamNameList = Arrays.asList(homeTeamNames);
     int[] spinnerLogos;
     Spinner awaySpinner;
     Spinner homeSpinner;
@@ -43,20 +36,20 @@ public class MainActivity extends AppCompatActivity {
 
         awaySpinner = findViewById(R.id.away_team_name);
         homeSpinner = findViewById(R.id.home_team_name);
-        spinnerAwayTeamNames = new String[]{"Choose Away Team", "Arizona Diamondbacks", "Atlanta Braves"
-                , "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians"
-                , "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels"
-                , "Log Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Mets"
-                , "New York Yankees", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates"
-                , "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals"
-                , "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"};
-        spinnerHomeTeamNames = new String[]{"Choose Home Team", "Arizona Diamondbacks", "Atlanta Braves"
-                , "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians"
-                , "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels"
-                , "Log Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Mets"
-                , "New York Yankees", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates"
-                , "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals"
-                , "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"};
+        spinnerAwayTeamNames = new String[]{"Choose Away\nTeam", "Arizona\nDiamondbacks", "Atlanta\nBraves"
+                , "Baltimore\nOrioles", "Boston\nRed Sox", "Chicago\nCubs", "Chicago\nWhite Sox", "Cincinnati\nReds", "Cleveland\nIndians"
+                , "Colorado\nRockies", "Detroit\nTigers", "Houston\nAstros", "Kansas City\nRoyals", "Los Angeles\nAngels"
+                , "Log Angeles\nDodgers", "Miami\nMarlins", "Milwaukee\nBrewers", "Minnesota\nTwins", "New York\nMets"
+                , "New York\nYankees", "Oakland\nAthletics", "Philadelphia\nPhillies", "Pittsburgh\nPirates"
+                , "San Diego\nPadres", "San Francisco\nGiants", "Seattle\nMariners", "St. Louis\nCardinals"
+                , "Tampa Bay\nRays", "Texas\nRangers", "Toronto\nBlue Jays", "Washington\nNationals"};
+        spinnerHomeTeamNames = new String[]{"Choose Home\nTeam", "Arizona\nDiamondbacks", "Atlanta\nBraves"
+                , "Baltimore\nOrioles", "Boston\nRed Sox", "Chicago\nCubs", "Chicago\nWhite Sox", "Cincinnati\nReds", "Cleveland\nIndians"
+                , "Colorado\nRockies", "Detroit\nTigers", "Houston\nAstros", "Kansas City\nRoyals", "Los Angeles\nAngels"
+                , "Log Angeles\nDodgers", "Miami\nMarlins", "Milwaukee\nBrewers", "Minnesota\nTwins", "New York\nMets"
+                , "New York\nYankees", "Oakland\nAthletics", "Philadelphia\nPhillies", "Pittsburgh\nPirates"
+                , "San Diego\nPadres", "San Francisco\nGiants", "Seattle\nMariners", "St. Louis\nCardinals"
+                , "Tampa Bay\nRays", "Texas\nRangers", "Toronto\nBlue Jays", "Washington\nNationals"};
         spinnerLogos = new int[]{R.drawable.mlb_logo, R.drawable.logo_ari_79x76, R.drawable.logo_atl_79x76
                 , R.drawable.logo_bal_79x76, R.drawable.logo_bos_79x76, R.drawable.logo_chc_79x76
                 , R.drawable.logo_cws_79x76, R.drawable.logo_cin_79x76, R.drawable.logo_cle_79x76

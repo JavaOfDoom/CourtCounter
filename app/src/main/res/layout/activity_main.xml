@@ -23,21 +23,23 @@
 
             <TextView
                 style="@style/inningTracking"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/text_layout_width"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_weight="2"
-                android:paddingRight="4dp"
+                android:paddingEnd="@dimen/text_padding"
+                android:paddingRight="@dimen/text_padding"
                 android:text="@string/inning"
                 android:textAlignment="viewEnd" />
 
             <TextView
                 android:id="@+id/current_inning"
                 style="@style/inningTracking"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/text_layout_width"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
-                android:paddingLeft="4dp"
+                android:paddingLeft="@dimen/text_padding"
+                android:paddingStart="@dimen/text_padding"
                 android:text="@string/first_inning" />
 
         </LinearLayout>
@@ -49,7 +51,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/text_layout_width"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -57,10 +59,12 @@
                 <Spinner
                     android:id="@+id/away_team_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/spinner_height"
                     android:gravity="center_horizontal"
-                    android:padding="16dp"
-                    android:spinnerMode="dialog" />
+                    android:padding="@dimen/spinner_padding"
+                    android:popupBackground="@color/colorPrimaryDark"
+                    android:spinnerMode="dialog"
+                    android:textColor="#FFF" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,7 +72,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -77,7 +81,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -93,7 +97,7 @@
                     <TextView
                         android:id="@+id/away_team_run"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -102,7 +106,7 @@
                     <TextView
                         android:id="@+id/away_team_outs"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -116,7 +120,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -124,7 +128,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -139,7 +143,7 @@
                     <TextView
                         android:id="@+id/away_team_strikes"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -148,7 +152,7 @@
                     <TextView
                         android:id="@+id/away_team_foul"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -159,36 +163,36 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addRunAwayTeam"
                     android:text="@string/run" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addOutAwayTeam"
                     android:text="@string/out" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addStrikeAwayTeam"
                     android:text="@string/strike" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addFoulAwayTeam"
                     android:text="@string/foul" />
 
@@ -210,9 +214,9 @@
                 <Spinner
                     android:id="@+id/home_team_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/spinner_height"
                     android:gravity="center_horizontal"
-                    android:padding="16dp"
+                    android:padding="@dimen/spinner_padding"
                     android:spinnerMode="dialog" />
 
                 <LinearLayout
@@ -221,7 +225,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -229,7 +233,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -245,7 +249,7 @@
                     <TextView
                         android:id="@+id/home_team_runs"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -254,7 +258,7 @@
                     <TextView
                         android:id="@+id/home_team_outs"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -268,7 +272,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -276,7 +280,7 @@
 
                     <TextView
                         style="@style/metricLabels"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -291,7 +295,7 @@
                     <TextView
                         android:id="@+id/home_team_strikes"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -300,7 +304,7 @@
                     <TextView
                         android:id="@+id/home_team_foul"
                         style="@style/trackedMetrics"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/text_layout_width"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
@@ -311,36 +315,36 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addRunHomeTeam"
                     android:text="@string/run" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addOutHomeTeam"
                     android:text="@string/out" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addStrikeHomeTeam"
                     android:text="@string/strike" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/metric_button_bottom"
+                    android:layout_marginLeft="@dimen/metric_button_margins"
+                    android:layout_marginRight="@dimen/metric_button_margins"
                     android:onClick="addFoulHomeTeam"
                     android:text="@string/foul" />
 
@@ -351,12 +355,12 @@
     </FrameLayout>
 
     <Button
-        android:layout_width="130dp"
+        android:layout_width="@dimen/reset_buttons_width"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginBottom="@dimen/reset_buttons_bottom"
+        android:layout_marginEnd="@dimen/reset_buttons_side_margin"
+        android:layout_marginRight="@dimen/reset_buttons_side_margin"
         android:layout_toLeftOf="@+id/full_reset"
         android:layout_toStartOf="@+id/full_reset"
         android:onClick="resetStrike"
@@ -364,21 +368,21 @@
 
     <Button
         android:id="@+id/full_reset"
-        android:layout_width="130dp"
+        android:layout_width="@dimen/reset_buttons_width"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="@dimen/reset_buttons_bottom"
         android:onClick="resetAll"
         android:text="@string/reset_all" />
 
     <Button
-        android:layout_width="130dp"
+        android:layout_width="@dimen/reset_buttons_width"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginBottom="@dimen/reset_buttons_bottom"
+        android:layout_marginLeft="@dimen/reset_buttons_side_margin"
+        android:layout_marginStart="@dimen/reset_buttons_side_margin"
         android:layout_toEndOf="@+id/full_reset"
         android:layout_toRightOf="@+id/full_reset"
         android:onClick="resetFoul"
